@@ -146,7 +146,7 @@ directions in the declaration rather than in a separate list.
 | Records on ports | Bundle `valid`/`data`/`ready`; shorter port maps |
 | Resolved subtypes | Multiple drivers resolved by a resolution function you can write |
 | Protected types | Object-like shared state in testbenches (VHDL's answer to classes) |
-| Conditional analysis | `` `if TOOL = "ghdl" `` style via `-- workaround: use generics instead` |
+| Conditional analysis | Tool-specific `--` directives; this course uses generics instead |
 | Physical types | `time` is a first-class type, not a preprocessor macro |
 | Matching case (`case?`) | `'-'` as don't-care in a `case` |
 | PSL in comments | Temporal assertions the simulator can check, invisible to synthesis |

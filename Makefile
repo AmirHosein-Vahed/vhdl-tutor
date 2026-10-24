@@ -1,6 +1,6 @@
 # vhdl-tutor — top-level commands. Run `make help` for the short version.
 #
-#   make                 quickstart: environment check, then run every written lesson
+#   make help            list the commands
 #   make list            course inventory and progress
 #   make test            run all written lessons (done + draft)
 #   make test-all        run every lesson that has code

@@ -27,7 +27,7 @@ and2_tb: PASS (4 checks)
 git clone <this-repo> vhdl-tutor && cd vhdl-tutor
 
 make env        # آیا GHDL نصب است و VHDL-2008 را می‌فهمد؟
-make test       # اجرای همهٔ درس‌های نوشته‌شده (فعلاً ۳ درس)
+make test       # اجرای همهٔ درس‌های نوشته‌شده
 make list       # نقشهٔ راه کامل و میزان پیشرفت
 ```
 
