@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ghdl gtkwave
+          ghdl --version
+
+      - name: Environment
+        run: make env
+
+      - name: Test every written lesson
+        run: make test
+
+      - name: Documentation pairs
+        run: make check-i18n

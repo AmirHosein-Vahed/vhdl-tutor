@@ -1,0 +1,19 @@
+{
+  "name": "vhdl-tutor",
+  "build": {
+    "dockerfile": "../tools/Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/course",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "teros-technology.teroshdl"
+      ],
+      "settings": {
+        "teroshdl.general.useVhdlLinter": false
+      }
+    }
+  },
+  "postCreateCommand": "make env && make test"
+}

@@ -1,0 +1,412 @@
+# Single source of truth for the course inventory.
+# scripts/curriculum.py reads this file: statuses drive `make list` and `make test`.
+
+[course]
+name = "vhdl-tutor"
+standard = "08"
+language = "en"
+second_language = "fa"
+ghdl_min = "5.0"
+
+
+[[topic]]
+id = "00-hello-world"
+title = "Hello world"
+title_fa = "سلام، دنیا"
+summary = "The smallest possible loop: write a design, write a testbench that checks it, run it, look at the waveform. Everything later in the course is this loop with more logic in the middle."
+
+[[topic.lesson]]
+id = "01-first-entity-and-testbench"
+title = "First entity and testbench"
+title_fa = "نخستین موجودیت و بستر آزمون"
+status = "done"
+
+[[topic.lesson]]
+id = "02-verilog-module-vs-vhdl-entity"
+title = "A Verilog module, rewritten in VHDL"
+title_fa = "بازنویسی یک ماژول وریلاگ در VHDL"
+status = "done"
+
+[[topic.lesson]]
+id = "03-waveforms-and-the-build-loop"
+title = "Waveforms and the build loop"
+title_fa = "شکل موج و چرخهٔ ساخت"
+status = "done"
+
+[[topic]]
+id = "01-language-basics"
+title = "Language basics"
+title_fa = "مبانی زبان"
+summary = "The parts of VHDL that have no Verilog equivalent, or a misleading one: strong typing, resolved signals, array ranges, and the delta cycle. Short topic, but everything after it depends on it."
+
+[[topic.lesson]]
+id = "01-types-and-literals"
+title = "Types and literals"
+title_fa = "انواع و لیترال‌ها"
+status = "planned"
+
+[[topic.lesson]]
+id = "02-signals-vs-variables"
+title = "Signals vs variables"
+title_fa = "سیگنال در برابر متغیر"
+status = "planned"
+
+[[topic.lesson]]
+id = "03-downto-vs-to-and-indexing"
+title = "downto vs to, and indexing"
+title_fa = "downto و to و اندیس‌گذاری"
+status = "planned"
+
+[[topic.lesson]]
+id = "04-std_logic_vector-and-numeric_std"
+title = "std_logic_vector and numeric_std"
+title_fa = "std_logic_vector و numeric_std"
+status = "planned"
+
+[[topic.lesson]]
+id = "05-concurrent-vs-sequential"
+title = "Concurrent vs sequential statements"
+title_fa = "دستورهای هم‌زمان و ترتیبی"
+status = "planned"
+
+[[topic.lesson]]
+id = "06-attributes-and-generics-intro"
+title = "Attributes and generics"
+title_fa = "ویژگی‌ها و جنریک‌ها"
+status = "planned"
+
+[[topic]]
+id = "02-combinational"
+title = "Combinational logic"
+title_fa = "منطق ترکیبی"
+summary = "Pure logic with no clock: the place where VHDL's strictness either saves you or gets in your way. Every example is small enough to check exhaustively."
+
+[[topic.lesson]]
+id = "01-mux-and-select"
+title = "Multiplexers: when, with, case"
+title_fa = "مالتی‌پلکسرها: when، with، case"
+status = "planned"
+
+[[topic.lesson]]
+id = "02-decoders-and-encoders"
+title = "Decoders and priority encoders"
+title_fa = "دیکدرها و انکدر اولویت‌دار"
+status = "planned"
+
+[[topic.lesson]]
+id = "03-adders-and-subtractors"
+title = "Adders and subtractors"
+title_fa = "جمع‌کننده‌ها و تفریق‌کننده‌ها"
+status = "planned"
+
+[[topic.lesson]]
+id = "04-comparators-and-alu"
+title = "Comparators and a small ALU"
+title_fa = "مقایسه‌کننده‌ها و یک ALU کوچک"
+status = "planned"
+
+[[topic.lesson]]
+id = "05-avoiding-latches"
+title = "Avoiding latches"
+title_fa = "پرهیز از لچ"
+status = "planned"
+
+[[topic]]
+id = "03-sequential"
+title = "Sequential logic"
+title_fa = "منطق ترتیبی"
+summary = "Clocks, resets and state. Verilog habits transfer here, but VHDL forces you to separate the clocked process from the combinational one — which is a feature, not a tax."
+
+[[topic.lesson]]
+id = "01-first-clocked-process"
+title = "The first clocked process"
+title_fa = "نخستین فرایند ساعت‌دار"
+status = "planned"
+
+[[topic.lesson]]
+id = "02-reset-styles"
+title = "Reset styles"
+title_fa = "سبک‌های ریست"
+status = "planned"
+
+[[topic.lesson]]
+id = "03-registers-and-clock-enable"
+title = "Registers and clock enables"
+title_fa = "رجیسترها و فعال‌ساز ساعت"
+status = "planned"
+
+[[topic.lesson]]
+id = "04-counters"
+title = "Counters"
+title_fa = "شمارنده‌ها"
+status = "planned"
+
+[[topic.lesson]]
+id = "05-shift-registers"
+title = "Shift registers"
+title_fa = "شیفت‌رجیسترها"
+status = "planned"
+
+[[topic]]
+id = "04-state-machines"
+title = "State machines"
+title_fa = "ماشین‌های حالت"
+summary = "Every FSM you have written in Verilog works in VHDL, but the idiomatic shape is different: an enumeration type instead of `localparam`, and a clear split between state register and next-state logic."
+
+[[topic.lesson]]
+id = "01-moore-mealy-template"
+title = "Moore, Mealy, and the template"
+title_fa = "مور، میلی و الگو"
+status = "planned"
+
+[[topic.lesson]]
+id = "02-encoding-and-state-signals"
+title = "State encoding and safe FSMs"
+title_fa = "کدگذاری حالت و ماشین ایمن"
+status = "planned"
+
+[[topic.lesson]]
+id = "03-fsm-debouncer"
+title = "FSM + datapath: debouncer"
+title_fa = "ماشین حالت به‌همراه مسیر داده: دیبانسر"
+status = "planned"
+
+[[topic.lesson]]
+id = "04-fsm-uart-transmitter"
+title = "FSM + datapath: UART transmitter"
+title_fa = "ماشین حالت به‌همراه مسیر داده: فرستندهٔ UART"
+status = "planned"
+
+[[topic]]
+id = "05-testbenches"
+title = "Testbenches"
+title_fa = "بسترهای آزمون"
+summary = "A testbench is where VHDL beats Verilog for verification. This topic turns hand-waved stimulus into repeatable, self-checking, timeout-protected tests — the foundation for everything in topic 11."
+
+[[topic.lesson]]
+id = "01-clock-reset-stimulus"
+title = "Clock, reset, stimulus"
+title_fa = "ساعت، ریست، محرک"
+status = "planned"
+
+[[topic.lesson]]
+id = "02-self-checking-with-asserts"
+title = "Self-checking testbenches"
+title_fa = "بسترهای خودبررسی"
+status = "planned"
+
+[[topic.lesson]]
+id = "03-file-io-and-tb-generics"
+title = "File I/O and TB generics"
+title_fa = "ورودی/خروجی فایل و جنریک‌های بستر آزمون"
+status = "planned"
+
+[[topic.lesson]]
+id = "04-wait-forms-and-timeouts"
+title = "wait forms and timeouts"
+title_fa = "شکل‌های wait و تایم‌اوت"
+status = "planned"
+
+[[topic.lesson]]
+id = "05-tb-helper-procedures"
+title = "Reusable testbench helpers"
+title_fa = "کمک‌تابع‌های قابل استفادهٔ مجدد بستر آزمون"
+status = "planned"
+
+[[topic]]
+id = "06-modularity"
+title = "Modularity"
+title_fa = "پیمانه‌ای‌سازی"
+summary = "How VHDL structures large designs: components, configurations, packages, records and generate. This is where the language does things Verilog simply cannot."
+
+[[topic.lesson]]
+id = "01-components-vs-direct-instantiation"
+title = "Components vs direct instantiation"
+title_fa = "کامپوننت در برابر نمونه‌سازی مستقیم"
+status = "planned"
+
+[[topic.lesson]]
+id = "02-configurations"
+title = "Configurations"
+title_fa = "پیکربندی‌ها"
+status = "planned"
+
+[[topic.lesson]]
+id = "03-packages-and-constants"
+title = "Packages and constants"
+title_fa = "بسته‌ها و ثابت‌ها"
+status = "planned"
+
+[[topic.lesson]]
+id = "04-records-and-bundled-ports"
+title = "Records and bundled ports"
+title_fa = "رکوردها و درگاه‌های دسته‌بندی‌شده"
+status = "planned"
+
+[[topic.lesson]]
+id = "05-generate-and-conditional-logic"
+title = "Generate and conditional logic"
+title_fa = "generate و منطق شرطی"
+status = "planned"
+
+[[topic]]
+id = "07-memories"
+title = "Memories"
+title_fa = "حافظه‌ها"
+summary = "RAM, ROM and FIFO — the structures that decide whether your design fits in block RAM or eats logic cells. The VHDL template matters as much as the algorithm."
+
+[[topic.lesson]]
+id = "01-rom-and-constants"
+title = "ROM and initialized constants"
+title_fa = "ROM و ثابت‌های مقدارگذاری‌شده"
+status = "planned"
+
+[[topic.lesson]]
+id = "02-single-port-ram"
+title = "Single-port RAM"
+title_fa = "RAM تک‌درگاهه"
+status = "planned"
+
+[[topic.lesson]]
+id = "03-simple-dual-port-ram"
+title = "Simple dual-port RAM"
+title_fa = "RAM سادهٔ دو‌درگاهه"
+status = "planned"
+
+[[topic.lesson]]
+id = "04-synchronous-fifo"
+title = "Synchronous FIFO"
+title_fa = "FIFO هم‌زمان"
+status = "planned"
+
+[[topic]]
+id = "08-arithmetic-dsp"
+title = "Arithmetic and DSP"
+title_fa = "حساب و پردازش سیگنال"
+summary = "Signed arithmetic, fixed point, pipelining and saturation. The place where VHDL's numeric packages either make your life easy or produce results that are wrong by exactly one bit."
+
+[[topic.lesson]]
+id = "01-signed-vs-unsigned-gotchas"
+title = "Signed vs unsigned gotchas"
+title_fa = "دام‌های signed و unsigned"
+status = "planned"
+
+[[topic.lesson]]
+id = "02-fixed-point"
+title = "Fixed point"
+title_fa = "ممیز ثابت"
+status = "planned"
+
+[[topic.lesson]]
+id = "03-pipelining-and-registered-math"
+title = "Pipelining and registered math"
+title_fa = "خط لوله و حساب رجیسترشده"
+status = "planned"
+
+[[topic.lesson]]
+id = "04-saturation-and-fir"
+title = "Saturation and a FIR filter"
+title_fa = "اشباع و فیلتر FIR"
+status = "planned"
+
+[[topic]]
+id = "09-interfaces"
+title = "Interfaces and protocols"
+title_fa = "رابط‌ها و پروتکل‌ها"
+summary = "Real designs are mostly plumbing. Learn the handshake that most modern buses are built on, then three protocols you can debug with a cheap logic analyzer, and finally the one thing that breaks every beginner: crossing clock domains."
+
+[[topic.lesson]]
+id = "01-valid-ready-handshake"
+title = "The valid/ready handshake"
+title_fa = "دست‌دادن valid/ready"
+status = "planned"
+
+[[topic.lesson]]
+id = "02-uart-receiver"
+title = "UART receiver"
+title_fa = "گیرندهٔ UART"
+status = "planned"
+
+[[topic.lesson]]
+id = "03-spi-master"
+title = "SPI master"
+title_fa = "استاد SPI"
+status = "planned"
+
+[[topic.lesson]]
+id = "04-clock-domain-crossing"
+title = "Clock domain crossing"
+title_fa = "عبور از دامنهٔ ساعت"
+status = "planned"
+
+[[topic]]
+id = "10-synthesis-awareness"
+title = "Synthesis awareness"
+title_fa = "آگاهی از سنتز"
+summary = "Simulation is not hardware. This topic is deliberately short and optional: enough to recognize code that will not synthesize, and to see what your RTL becomes."
+
+[[topic.lesson]]
+id = "01-synthesizable-subset"
+title = "The synthesizable subset"
+title_fa = "زیرمجموعهٔ سنتزپذیر"
+status = "planned"
+
+[[topic.lesson]]
+id = "02-inferring-hardware"
+title = "Inferring hardware"
+title_fa = "استنتاج سخت‌افزار"
+status = "planned"
+
+[[topic.lesson]]
+id = "03-yosys-netlist-look"
+title = "Looking at the netlist with Yosys"
+title_fa = "دیدن شبکه با Yosys"
+status = "planned"
+
+[[topic]]
+id = "11-verification"
+title = "Verification frameworks"
+title_fa = "چارچوب‌های راستی‌آزمایی"
+summary = "Optional but career-changing: VUnit, OSVVM and cocotb turn hand-written testbenches into a regression suite. This topic shows the shape of each, not a full course."
+
+[[topic.lesson]]
+id = "01-vunit-basics"
+title = "VUnit basics"
+title_fa = "مبانی VUnit"
+status = "planned"
+
+[[topic.lesson]]
+id = "02-osvvm-and-randomization"
+title = "OSVVM and randomization"
+title_fa = "OSVVM و تصادفی‌سازی"
+status = "planned"
+
+[[topic.lesson]]
+id = "03-psl-assertions"
+title = "PSL assertions"
+title_fa = "ادعاهای PSL"
+status = "planned"
+
+[[topic]]
+id = "12-projects"
+title = "Capstone projects"
+title_fa = "پروژه‌های پایانی"
+summary = "Three designs that combine everything: a stopwatch, a VGA pattern generator, and a small serial-controlled CPU. No new language features — only integration, which is the actual skill."
+
+[[topic.lesson]]
+id = "01-seven-segment-stopwatch"
+title = "Seven-segment stopwatch"
+title_fa = "کرونومتر هفت‌قطعه‌ای"
+status = "planned"
+
+[[topic.lesson]]
+id = "02-vga-pattern-generator"
+title = "VGA pattern generator"
+title_fa = "مولد الگوی VGA"
+status = "planned"
+
+[[topic.lesson]]
+id = "03-serial-alu-cpu"
+title = "Serial-controlled ALU/CPU"
+title_fa = "پردازندهٔ کوچک با کنترل سریال"
+status = "planned"

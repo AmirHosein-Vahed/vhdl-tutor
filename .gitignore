@@ -1,0 +1,20 @@
+# Build outputs
+build/
+*.ghw
+*.vcd
+*.fst
+*.cf
+work-obj*.cf
+synth.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
