@@ -77,11 +77,16 @@ reports a failure. That is the whole contract, and it is why every lesson can
 be regression-tested with one command:
 
 ```bash
+make check-lessons     # folders, statuses and code agree
 make test              # every lesson with status done or draft
 make test-all          # every lesson that has code
 make test-07-memories  # one topic
 make test -v           # same, but print simulator output for failures
 ```
+
+CI runs `make check-lessons` and then `make test-all`. A lesson is simulated as
+soon as it has `src/*.vhd` and a `tb/*_tb.vhd`, even while it is still marked
+`draft` or `planned`; lessons that contain only `.gitkeep` are skipped.
 
 GHDL details that make this work:
 

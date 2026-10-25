@@ -15,5 +15,5 @@
       }
     }
   },
-  "postCreateCommand": "make env && make test"
+  "postCreateCommand": "make env && make check-lessons && make test-all"
 }

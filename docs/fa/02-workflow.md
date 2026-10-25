@@ -76,11 +76,16 @@ make wave WAVE_VIEWER=gtkwave
 کل قرارداد است و به همین دلیل هر درس با یک فرمان قابل رگرسیون‌آزمایی است:
 
 ```bash
+make check-lessons     # هم‌خوانی پوشه‌ها، وضعیت‌ها و کد
 make test              # همهٔ درس‌های done یا draft
 make test-all          # هر درسی که کد دارد
 make test-07-memories  # یک موضوع
 make test -v           # نمایش خروجی شبیه‌ساز در شکست
 ```
+
+CI اول `make check-lessons` را اجرا می‌کند و بعد `make test-all`. هر درس
+به‌محض داشتن `src/*.vhd` و `tb/*_tb.vhd` شبیه‌سازی می‌شود، حتی اگر هنوز
+`draft` یا `planned` باشد؛ درس‌هایی که فقط `.gitkeep` دارند رد می‌شوند.
 
 جزئیات GHDL که این را ممکن می‌کند:
 

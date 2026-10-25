@@ -4,6 +4,8 @@
 #   make list            course inventory and progress
 #   make test            run all written lessons (done + draft)
 #   make test-all        run every lesson that has code
+#   make check-lessons   verify course.toml, folders and code agree
+#   make coded           list lessons with source + testbench
 #   make test-03-sequential   run one topic
 #   make run LESSON=00-hello-world/01-first-entity-and-testbench
 #   make wave LESSON=...
@@ -15,7 +17,7 @@ CURRICULUM := scripts/curriculum.py
 
 .DEFAULT_GOAL := help
 
-.PHONY: help list test test-all run wave env check-i18n clean new install-tools
+.PHONY: help list list-verbose test test-all coded check-lessons matrix run wave env check-i18n clean new install-tools
 
 help:
 	@echo "vhdl-tutor"
@@ -24,6 +26,9 @@ help:
 	@echo "  make list-verbose            every lesson with its status"
 	@echo "  make test                    run every written lesson"
 	@echo "  make test-all                run every lesson that has code"
+	@echo "  make coded                   list lessons with source + testbench"
+	@echo "  make check-lessons           verify folders, statuses and code agree"
+	@echo "  make matrix                  print a JSON matrix of lessons with code"
 	@echo "  make test-<topic>            run one topic, e.g. make test-03-sequential"
 	@echo "  make run  LESSON=<topic>/<lesson>"
 	@echo "  make wave LESSON=<topic>/<lesson>"
@@ -45,6 +50,15 @@ test:
 
 test-all:
 	@$(PYTHON) $(CURRICULUM) test --status all
+
+coded:
+	@$(PYTHON) $(CURRICULUM) coded
+
+check-lessons:
+	@$(PYTHON) $(CURRICULUM) check
+
+matrix:
+	@$(PYTHON) $(CURRICULUM) matrix
 
 test-%:
 	@$(PYTHON) $(CURRICULUM) test --status all --topic $*

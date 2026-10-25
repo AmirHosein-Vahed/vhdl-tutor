@@ -26,9 +26,11 @@ and2_tb: PASS (4 checks)
 ```bash
 git clone <this-repo> vhdl-tutor && cd vhdl-tutor
 
-make env        # آیا GHDL نصب است و VHDL-2008 را می‌فهمد؟
-make test       # اجرای همهٔ درس‌های نوشته‌شده
-make list       # نقشهٔ راه کامل و میزان پیشرفت
+make env            # آیا GHDL نصب است و VHDL-2008 را می‌فهمد؟
+make check-lessons  # آیا course.toml، پوشه‌ها و کد با هم می‌خوانند؟
+make test           # اجرای همهٔ درس‌های نوشته‌شده
+make test-all       # اجرای هر درسی که کد واقعی دارد
+make list           # نقشهٔ راه کامل و میزان پیشرفت
 ```
 
 هنوز GHDL نداری؟
@@ -158,8 +160,13 @@ make new TOPIC=04-state-machines/05-sequence-detector \
 ```
 
 این فرمان پوشه، دو README، Makefile دوخطی را می‌سازد و درس را با وضعیت
-`planned` در `course.toml` ثبت می‌کند. کد را بنویس، وضعیت را `done` کن و
-`make test` آن را خودکار برمی‌دارد.
+`planned` در `course.toml` ثبت می‌کند. سورس و بستر آزمون را بنویس و
+`make test-all` را اجرا کن؛ CI به‌محض وجود این فایل‌ها درس را برمی‌دارد، حتی
+پیش از تغییر وضعیت به `done`.
+
+CI ابتدا `make check-lessons` را اجرا می‌کند و سپس `make test-all`. هر درس
+به‌محض داشتن `src/*.vhd` و `tb/*_tb.vhd` آزمایش می‌شود؛ درس‌هایی که فقط README
+یا `.gitkeep` دارند رد می‌شوند و درس `done` بدون کد، بررسی را شکست می‌دهد.
 
 قواعدی که دوره رعایت می‌کند:
 

@@ -4,23 +4,52 @@ on:
   push:
   pull_request:
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
 jobs:
-  test:
+  checks:
+    name: course checks
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install toolchain
+      - name: Lesson folders and statuses
+        run: make check-lessons
+
+      - name: Documentation pairs
+        run: make check-i18n
+
+  test:
+    name: coded lessons
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install GHDL
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends ghdl gtkwave
+          sudo apt-get install -y --no-install-recommends ghdl
           ghdl --version
 
       - name: Environment
         run: make env
 
-      - name: Test every written lesson
-        run: make test
+      - name: Show lessons with code
+        run: |
+          {
+            echo "### Lessons with source and a testbench"
+            echo
+            make --no-print-directory coded | sed 's/^/- `/; s/$/`/'
+            echo
+            echo "Lessons that only contain README files or .gitkeep are skipped."
+          } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Documentation pairs
-        run: make check-i18n
+      - name: Test every lesson with code
+        run: make --no-print-directory test-all

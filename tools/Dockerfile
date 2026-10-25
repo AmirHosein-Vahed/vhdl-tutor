@@ -20,6 +20,6 @@ WORKDIR /course
 COPY . .
 
 # The skeleton must be green out of the box.
-RUN make test
+RUN make check-lessons && make test-all
 
 CMD ["bash"]

@@ -27,9 +27,11 @@ and2_tb: PASS (4 checks)
 ```bash
 git clone <this-repo> vhdl-tutor && cd vhdl-tutor
 
-make env        # is GHDL installed and does it speak VHDL-2008?
-make test       # run every written lesson
-make list       # the full roadmap and progress
+make env            # is GHDL installed and does it speak VHDL-2008?
+make check-lessons  # do course.toml, folders and code agree?
+make test           # run every written lesson
+make test-all       # run every lesson that has real code
+make list           # the full roadmap and progress
 ```
 
 No GHDL yet?
@@ -160,8 +162,14 @@ make new TOPIC=04-state-machines/05-sequence-detector \
 ```
 
 This creates the folder, both READMEs, the two-line Makefile, and registers the
-lesson in `course.toml` as `planned`. Write the code, set the status to `done`,
-and `make test` picks it up.
+lesson in `course.toml` as `planned`. Write the source and a testbench, then run
+`make test-all`; CI picks the lesson up as soon as those files exist, even
+before you flip the status to `done`.
+
+CI runs `make check-lessons` first and then `make test-all`. A lesson is tested
+as soon as it has `src/*.vhd` and a `tb/*_tb.vhd`; lessons that contain only
+README files or `.gitkeep` are skipped, while a `done` lesson without code fails
+the check.
 
 Rules the course keeps:
 
