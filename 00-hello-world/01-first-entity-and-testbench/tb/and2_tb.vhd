@@ -39,6 +39,8 @@ begin
     a <= '1'; b <= '1'; wait for 1 ns;
     check_eq(y, '1', "1 and 1");
 
+    wait for 1 ns;
+
     -- Prints PASS/FAIL and ends the simulation with a meaningful exit code.
     summary("and2_tb");
     wait;
