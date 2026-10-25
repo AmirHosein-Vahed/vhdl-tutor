@@ -43,37 +43,37 @@ summary = "The parts of VHDL that have no Verilog equivalent, or a misleading on
 id = "01-types-and-literals"
 title = "Types and literals"
 title_fa = "انواع و لیترال‌ها"
-status = "planned"
+status = "done"
 
 [[topic.lesson]]
 id = "02-signals-vs-variables"
 title = "Signals vs variables"
 title_fa = "سیگنال در برابر متغیر"
-status = "planned"
+status = "done"
 
 [[topic.lesson]]
 id = "03-downto-vs-to-and-indexing"
 title = "downto vs to, and indexing"
 title_fa = "downto و to و اندیس‌گذاری"
-status = "planned"
+status = "done"
 
 [[topic.lesson]]
 id = "04-std_logic_vector-and-numeric_std"
 title = "std_logic_vector and numeric_std"
 title_fa = "std_logic_vector و numeric_std"
-status = "planned"
+status = "done"
 
 [[topic.lesson]]
 id = "05-concurrent-vs-sequential"
 title = "Concurrent vs sequential statements"
 title_fa = "دستورهای هم‌زمان و ترتیبی"
-status = "planned"
+status = "done"
 
 [[topic.lesson]]
 id = "06-attributes-and-generics-intro"
 title = "Attributes and generics"
 title_fa = "ویژگی‌ها و جنریک‌ها"
-status = "planned"
+status = "done"
 
 [[topic]]
 id = "02-combinational"

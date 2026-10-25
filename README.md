@@ -90,7 +90,7 @@ Useful overrides: `STD=93`, `TOP=other_tb`, `STOP_TIME=10ms`,
 | # | Topic | Lessons | Status |
 |---|---|---|---|
 | [00](00-hello-world/README.md) | Hello world | 3 | **written** |
-| [01](01-language-basics/README.md) | Language basics | 6 | scaffolded |
+| [01](01-language-basics/README.md) | Language basics | 6 | **written** |
 | [02](02-combinational/README.md) | Combinational logic | 5 | scaffolded |
 | [03](03-sequential/README.md) | Sequential logic | 5 | scaffolded |
 | [04](04-state-machines/README.md) | State machines | 4 | scaffolded |
@@ -103,9 +103,11 @@ Useful overrides: `STD=93`, `TOP=other_tb`, `STOP_TIME=10ms`,
 | [11](11-verification/README.md) | Verification frameworks | 3 | scaffolded |
 | [12](12-projects/README.md) | Capstone projects | 3 | scaffolded |
 
-A scaffolded lesson already has its goal, concepts, tasks and hints written —
-only the code and worked explanation are missing. `make` inside it says so and
-exits successfully, so CI stays green while the course is being written.
+A **written** lesson has the full source, a self-checking testbench and a worked
+explanation; `make test` runs all of them. A scaffolded lesson already has its
+goal, concepts, tasks and hints written — only the code and worked explanation
+are missing. `make` inside it says so and exits successfully, so CI stays green
+while the course is being written.
 
 ---
 

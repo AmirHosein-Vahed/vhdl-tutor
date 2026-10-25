@@ -1,6 +1,6 @@
 # 01-language-basics — Language basics
 
-**Status:** 0/6 lessons written · [Roadmap](../../README.md) · [فارسی](README.fa.md)
+**Status:** 6/6 lessons written · [Roadmap](../../README.md) · [فارسی](README.fa.md)
 
 ## Why this topic
 
@@ -23,12 +23,12 @@ The parts of VHDL that have no Verilog equivalent, or a misleading one: strong t
 
 | # | Lesson | Goal | Status |
 |---|---|---|---|
-| 01 | [Types and literals](01-types-and-literals/README.md) | Stop treating `std_logic` as `logic`. Learn the 9 values, the numeric types, and every literal form you will meet. | planned |
-| 02 | [Signals vs variables](02-signals-vs-variables/README.md) | Understand the single biggest semantic difference from Verilog's blocking/non-blocking split: signals are scheduled, variables are immediate. | planned |
-| 03 | [downto vs to, and indexing](03-downto-vs-to-and-indexing/README.md) | Get array ranges right the first time, and stop guessing which bit is the MSB. | planned |
-| 04 | [std_logic_vector and numeric_std](04-std_logic_vector-and-numeric_std/README.md) | Do arithmetic without `std_logic_arith`. Learn the conversions, the width rules, and why mixing libraries is a bug factory. | planned |
-| 05 | [Concurrent vs sequential statements](05-concurrent-vs-sequential/README.md) | See that `y <= a and b;` is already a process, and that `when`/`with`/`case`/`if` are interchangeable descriptions of the same hardware. | planned |
-| 06 | [Attributes and generics](06-attributes-and-generics-intro/README.md) | Use attributes instead of magic numbers, and generics instead of editing constants before every build. | planned |
+| 01 | [Types and literals](01-types-and-literals/README.md) | Stop treating `std_logic` as `logic`. Learn the 9 values, the numeric types, and every literal form you will meet. | done |
+| 02 | [Signals vs variables](02-signals-vs-variables/README.md) | Understand the single biggest semantic difference from Verilog's blocking/non-blocking split: signals are scheduled, variables are immediate. | done |
+| 03 | [downto vs to, and indexing](03-downto-vs-to-and-indexing/README.md) | Get array ranges right the first time, and stop guessing which bit is the MSB. | done |
+| 04 | [std_logic_vector and numeric_std](04-std_logic_vector-and-numeric_std/README.md) | Do arithmetic without `std_logic_arith`. Learn the conversions, the width rules, and why mixing libraries is a bug factory. | done |
+| 05 | [Concurrent vs sequential statements](05-concurrent-vs-sequential/README.md) | See that `y <= a and b;` is already a process, and that `when`/`with`/`case`/`if` are interchangeable descriptions of the same hardware. | done |
+| 06 | [Attributes and generics](06-attributes-and-generics-intro/README.md) | Use attributes instead of magic numbers, and generics instead of editing constants before every build. | done |
 
 ## After this topic you can
 
