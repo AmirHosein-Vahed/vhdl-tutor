@@ -90,12 +90,3 @@ make clean  # remove build/
   leftmost-to-leftmost — a silent reversal, not an error.
 
 </details>
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — §5.3
-  (array types) and §8.1 (indexed names).
-- [GHDL documentation](https://ghdl.github.io/ghdl/) — bound checks and
-  direction-mismatch diagnostics.
-- [03 — Style guide](../../docs/03-style-guide.md) — the course's rule: pick
-  `downto` for vectors that represent numbers.

@@ -34,9 +34,3 @@ make clean  # remove build/
 
 1. Make the 7-segment decoder display `A`–`F` for inputs 10–15 and a blank for an invalid digit.
 2. Add an enable to the decoder and explain why gating the outputs is better than gating the input.
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — the language standard (dry, definitive).
-- [GHDL documentation](https://ghdl.github.io/ghdl/) — the simulator used throughout this course.
-- [VHDL-2008: Just the New Stuff](https://www.elsevier.com/books/vhdl-2008-just-the-new-stuff/ashenden/978-0-12-374249-0) — Ashenden & Lewis.

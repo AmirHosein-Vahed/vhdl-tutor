@@ -84,11 +84,3 @@ differs, and that changes the latency.
   variable cannot leave its process.
 
 </details>
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — §10.5
-  (signal assignment) and §10.6 (variable assignment).
-- [GHDL documentation](https://ghdl.github.io/ghdl/) — delta cycles in the
-  simulation cycle.
-- [04 — Pitfalls](../../docs/04-pitfalls.md) — the delta-cycle traps in context.

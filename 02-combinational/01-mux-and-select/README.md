@@ -35,9 +35,3 @@ make clean  # remove build/
 
 1. Add a `valid` input to a 4:1 mux that forces the output to `'0'` when low.
 2. Rewrite a nested `when/else` as `with/select` and check the truth table is unchanged.
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — the language standard (dry, definitive).
-- [GHDL documentation](https://ghdl.github.io/ghdl/) — the simulator used throughout this course.
-- [VHDL-2008: Just the New Stuff](https://www.elsevier.com/books/vhdl-2008-just-the-new-stuff/ashenden/978-0-12-374249-0) — Ashenden & Lewis.

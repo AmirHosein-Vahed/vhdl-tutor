@@ -100,12 +100,3 @@ make clean  # remove build/
   a `natural` in range.
 
 </details>
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — §9.2
-  (operators) and the `numeric_std` package.
-- [IEEE 1076.3](https://ieeexplore.ieee.org/document/893778) — the standard that
-  defines `numeric_std`.
-- [05 — Cheatsheet](../../docs/05-cheatsheet.md) — conversion table for
-  `std_logic_vector`, `unsigned`, `signed`, and `integer`.

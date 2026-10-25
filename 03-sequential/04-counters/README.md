@@ -35,9 +35,3 @@ make clean  # remove build/
 
 1. Add a prescaler so the counter ticks once per millisecond from a 50 MHz clock.
 2. Build a BCD counter (0–9) and cascade two of them into a 00–99 counter.
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — the language standard (dry, definitive).
-- [GHDL documentation](https://ghdl.github.io/ghdl/) — the simulator used throughout this course.
-- [VHDL-2008: Just the New Stuff](https://www.elsevier.com/books/vhdl-2008-just-the-new-stuff/ashenden/978-0-12-374249-0) — Ashenden & Lewis.

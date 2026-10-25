@@ -34,9 +34,3 @@ make clean  # remove build/
 
 1. Verify the bit period in the waveform for 115200 baud from a 50 MHz clock.
 2. Add a `parity` generic and make the testbench decode the frame it receives.
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — the language standard (dry, definitive).
-- [GHDL documentation](https://ghdl.github.io/ghdl/) — the simulator used throughout this course.
-- [VHDL-2008: Just the New Stuff](https://www.elsevier.com/books/vhdl-2008-just-the-new-stuff/ashenden/978-0-12-374249-0) — Ashenden & Lewis.

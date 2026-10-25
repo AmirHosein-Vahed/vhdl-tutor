@@ -86,11 +86,3 @@ make clean  # پاک کردن build/
   منفی.
 
 </details>
-
-## مطالعهٔ بیشتر
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — بند ۵٫۲
-  (انواع مقیاسی) و بند ۱۵ (عناصر واژگانی).
-- [مستندات GHDL](https://ghdl.github.io/ghdl/) — نحوهٔ گزارش متامقدارها و
-  بررسی بازه.
-- [VHDL-2008: Just the New Stuff](https://www.elsevier.com/books/vhdl-2008-just-the-new-stuff/ashenden/978-0-12-374249-0) — اشنیدن و لوئیس.

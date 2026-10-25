@@ -34,9 +34,3 @@ make clean  # remove build/
 
 1. Swap the DUT architecture in a testbench without touching the instantiation.
 2. Break an association by position and observe how late the error appears.
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — the language standard (dry, definitive).
-- [GHDL documentation](https://ghdl.github.io/ghdl/) — the simulator used throughout this course.
-- [VHDL-2008: Just the New Stuff](https://www.elsevier.com/books/vhdl-2008-just-the-new-stuff/ashenden/978-0-12-374249-0) — Ashenden & Lewis.

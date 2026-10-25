@@ -91,11 +91,3 @@ make clean  # پاک کردن build/
   لچ است.
 
 </details>
-
-## مطالعهٔ بیشتر
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — بند ۱۰٫۵
-  (انتساب سیگنال هم‌زمان) و ۱۰٫۹ (دستور case).
-- [مستندات GHDL](https://ghdl.github.io/ghdl/) — حساسیت و `process (all)`.
-- [۰۶ — راستی‌آزمایی](../../docs/fa/06-verification.md) — چرا بستر آزمون
-  خودبررسی برای این نوع هم‌ارزی از شکل موج بهتر است.

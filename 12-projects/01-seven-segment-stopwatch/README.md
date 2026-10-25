@@ -34,9 +34,3 @@ make clean  # remove build/
 
 1. Add a lap-time register that captures the current count on a fourth button.
 2. Make the display blank leading zeros and test the 59.99 → 00.00 rollover.
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — the language standard (dry, definitive).
-- [GHDL documentation](https://ghdl.github.io/ghdl/) — the simulator used throughout this course.
-- [VHDL-2008: Just the New Stuff](https://www.elsevier.com/books/vhdl-2008-just-the-new-stuff/ashenden/978-0-12-374249-0) — Ashenden & Lewis.

@@ -92,12 +92,3 @@ outputs agree with each other.
   way to avoid latches.
 
 </details>
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — §10.5
-  (concurrent signal assignment) and §10.9 (case statement).
-- [GHDL documentation](https://ghdl.github.io/ghdl/) — sensitivity and
-  `process (all)`.
-- [06 — Verification](../../docs/06-verification.md) — why a self-checking
-  testbench beats a waveform for this kind of equivalence.

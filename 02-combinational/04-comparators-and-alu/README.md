@@ -34,9 +34,3 @@ make clean  # remove build/
 
 1. Add a `NOT` and a shift op, and make sure unused opcodes produce a defined result.
 2. Drive the ALU with every 4-bit opcode in a loop and check no output is `'U'` or `'X'`.
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — the language standard (dry, definitive).
-- [GHDL documentation](https://ghdl.github.io/ghdl/) — the simulator used throughout this course.
-- [VHDL-2008: Just the New Stuff](https://www.elsevier.com/books/vhdl-2008-just-the-new-stuff/ashenden/978-0-12-374249-0) — Ashenden & Lewis.

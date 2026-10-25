@@ -34,9 +34,3 @@ make clean  # remove build/
 
 1. Define a valid/ready record and use it for the handshake module in topic 09.
 2. Write a function that converts the record to a flat vector for a top-level port.
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — the language standard (dry, definitive).
-- [GHDL documentation](https://ghdl.github.io/ghdl/) — the simulator used throughout this course.
-- [VHDL-2008: Just the New Stuff](https://www.elsevier.com/books/vhdl-2008-just-the-new-stuff/ashenden/978-0-12-374249-0) — Ashenden & Lewis.

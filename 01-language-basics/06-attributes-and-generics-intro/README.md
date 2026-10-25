@@ -96,12 +96,3 @@ make clean  # remove build/
 - `generic map` uses `=>`, the same association syntax as `port map`.
 
 </details>
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — §6.5.3
-  (generics), §16.2 (predefined attributes).
-- [GHDL documentation](https://ghdl.github.io/ghdl/) — elaboration order and
-  generic diagnostics.
-- [07 — Synthesis](../../docs/07-synthesis.md) — what a generic costs in
-  hardware (usually nothing: it is resolved before synthesis).

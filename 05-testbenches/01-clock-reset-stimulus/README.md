@@ -34,9 +34,3 @@ make clean  # remove build/
 
 1. Parameterize the clock period with a generic and run the same TB at 10 MHz and 100 MHz.
 2. Add an active-low reset and check the DUT outputs are defined during reset.
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — the language standard (dry, definitive).
-- [GHDL documentation](https://ghdl.github.io/ghdl/) — the simulator used throughout this course.
-- [VHDL-2008: Just the New Stuff](https://www.elsevier.com/books/vhdl-2008-just-the-new-stuff/ashenden/978-0-12-374249-0) — Ashenden & Lewis.

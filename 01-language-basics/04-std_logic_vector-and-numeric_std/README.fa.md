@@ -98,12 +98,3 @@ make clean  # پاک کردن build/
   باشد کار می‌کند.
 
 </details>
-
-## مطالعهٔ بیشتر
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — بند ۹٫۲
-  (عملگرها) و بستهٔ `numeric_std`.
-- [IEEE 1076.3](https://ieeexplore.ieee.org/document/893778) — استانداردی که
-  `numeric_std` را تعریف می‌کند.
-- [۰۵ — برگهٔ تقلب](../../docs/fa/05-cheatsheet.md) — جدول تبدیل بین
-  `std_logic_vector`، `unsigned`، `signed` و `integer`.

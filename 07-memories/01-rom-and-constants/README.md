@@ -34,9 +34,3 @@ make clean  # remove build/
 
 1. Generate a 256-entry sine table with a function and check three values in a testbench.
 2. Load the same table from a text file with `textio` and compare the two ROMs.
-
-## Further reading
-
-- [IEEE 1076-2008](https://ieeexplore.ieee.org/document/4774590) — the language standard (dry, definitive).
-- [GHDL documentation](https://ghdl.github.io/ghdl/) — the simulator used throughout this course.
-- [VHDL-2008: Just the New Stuff](https://www.elsevier.com/books/vhdl-2008-just-the-new-stuff/ashenden/978-0-12-374249-0) — Ashenden & Lewis.
