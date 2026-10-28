@@ -1,36 +1,30 @@
 # 04 — Comparators and a small ALU
 
-**Status:** planned · **Topic:** [02-combinational — Combinational logic](../README.md) · [فارسی](README.fa.md)
+**Status:** done · **Topic:** [02-combinational — Combinational logic](../README.md) · [فارسی](README.fa.md)
 
-> **Planned.** The goal, concepts and tasks below are the contract for this
-> lesson; the code arrives when this topic is filled in. Feel free to attempt
-> the tasks against the patterns from earlier lessons.
+> **Ready.** Run `make` in this folder. It builds `alu`, runs its
+> self-checking testbench, and exits non-zero if anything fails.
 
 ## Goal
 
-Use the comparison operators on numeric types, then assemble a parameterized ALU and test every opcode.
-
-## Coming from Verilog
-
-| Verilog / SystemVerilog | VHDL |
-|---|---|
-| `localparam ADD = 2'b00;` | `type op_t is (OP_ADD, OP_SUB, OP_AND, OP_OR);` |
+Build a small combinational ALU supporting arithmetic, bitwise logic, and signed comparisons with a zero flag.
 
 ## Concepts
 
-- Comparisons only exist for compatible types — compare `unsigned` with `unsigned`, never with a vector.
-- An ALU is a `case` over an opcode enumeration, with a shared `zero`/`carry` output path.
-- An enumerated opcode removes magic numbers from the testbench too.
+- Combining `case` statements with arithmetic and logic operations in a combinational process.
+- Generating status flags like `zero` based on internal signal states.
+
+## Files
+
+| File | Purpose |
+|---|---|
+| `src/alu.vhd` | small combinational ALU and comparator |
+| `tb/alu_tb.vhd` | self-checking testbench for ALU operations |
 
 ## Run
 
 ```bash
 make        # analyze + elaborate + run the self-checking testbench
-make wave   # same, and open the waveform in Surfer or GTKWave
+make wave   # same, and open the waveform
 make clean  # remove build/
 ```
-
-## Tasks
-
-1. Add a `NOT` and a shift op, and make sure unused opcodes produce a defined result.
-2. Drive the ALU with every 4-bit opcode in a loop and check no output is `'U'` or `'X'`.

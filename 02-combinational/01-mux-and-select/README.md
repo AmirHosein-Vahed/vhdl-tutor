@@ -1,14 +1,13 @@
 # 01 — Multiplexers: when, with, case
 
-**Status:** planned · **Topic:** [02-combinational — Combinational logic](../README.md) · [فارسی](README.fa.md)
+**Status:** done · **Topic:** [02-combinational — Combinational logic](../README.md) · [فارسی](README.fa.md)
 
-> **Planned.** The goal, concepts and tasks below are the contract for this
-> lesson; the code arrives when this topic is filled in. Feel free to attempt
-> the tasks against the patterns from earlier lessons.
+> **Ready.** Run `make` in this folder. It builds `mux_advanced`, runs its
+> self-checking testbench, and exits non-zero if anything fails.
 
 ## Goal
 
-Build 2:1 and 4:1 muxes in all three styles and know which one to reach for.
+Build 2:1 and 4:1 muxes with enable control in all three styles (`when/else`, `with/select`, and process `case`) and know which one to reach for.
 
 ## Coming from Verilog
 
@@ -22,6 +21,13 @@ Build 2:1 and 4:1 muxes in all three styles and know which one to reach for.
 - `when/else` chains are priority logic; order matters.
 - `with ... select` is a parallel case: exactly one branch matches, and it must be exhaustive.
 - `case` inside a process is sequential syntax describing combinational hardware.
+
+## Files
+
+| File | Purpose |
+|---|---|
+| `src/mux_advanced.vhd` | 4:1 mux with enable control in 3 styles |
+| `tb/mux_advanced_tb.vhd` | self-checking testbench covering all inputs and disable states |
 
 ## Run
 
