@@ -82,8 +82,14 @@ make synth
 که این را اجرا می‌کند:
 
 ```bash
-yosys -m ghdl -p "ghdl --std=08 --workdir=build -e and2; synth; stat"
+yosys -m ghdl -p "ghdl --std=08 --workdir=build and2; synth; stat"
 ```
+
+هدف `make synth` ابتدا منابع را با GHDL تحلیل می‌کند و سپس از افزونهٔ Yosys
+می‌خواهد واحدی را که از قبل در `build/` هست elaborates کند. اگر GHDL را از
+tarball قابل‌جابه‌جایی نصب کرده‌اید (نه از بستهٔ توزیع)، `GHDL_PREFIX` را تنظیم
+کنید (مثلاً `~/.local/opt/ghdl-6.0.0/lib/ghdl`) تا libghdl کتابخانه‌های `std`
+و `ieee` را پیدا کند.
 
 گزارش چه می‌گوید:
 

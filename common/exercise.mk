@@ -81,12 +81,13 @@ vcd: run
 #   sudo apt install yosys
 #   https://github.com/ghdl/ghdl-yosys-plugin
 SYNTH_TOP ?= $(notdir $(basename $(firstword $(SRC))))
+YOSYS     ?= yosys
 synth: analyze | $(BUILD)
-	@command -v yosys >/dev/null 2>&1 || { \
+	@command -v $(YOSYS) >/dev/null 2>&1 || { \
 		echo "yosys not found — see docs/07-synthesis.md"; exit 1; }
 	@test -n "$(SYNTH_TOP)" || { \
 		echo "no synthesizable source in src/ — see docs/07-synthesis.md"; exit 2; }
-	@yosys -m ghdl -p "ghdl $(GHDL_FLAGS) -e $(SYNTH_TOP); synth; stat" 2>&1 \
+	@$(YOSYS) -m ghdl -p "ghdl $(GHDL_FLAGS) $(SYNTH_TOP); synth; stat" 2>&1 \
 		| tee $(BUILD)/synth.log
 
 clean:
@@ -103,6 +104,7 @@ help:
 	@echo "  make clean      remove build/"
 	@echo ""
 	@echo "  variables: GHDL=$(GHDL) STD=$(STD) TOP=$(TOP) STOP_TIME=$(STOP_TIME)"
+	@echo "             SYNTH_TOP=$(SYNTH_TOP) YOSYS=$(YOSYS)"
 	@echo "             RUN_ARGS='$(RUN_ARGS)' WAVE_VIEWER=$(WAVE_VIEWER)"
 
 $(BUILD):

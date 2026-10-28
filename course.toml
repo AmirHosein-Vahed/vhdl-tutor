@@ -85,31 +85,31 @@ summary = "Pure logic with no clock: the place where VHDL's strictness either sa
 id = "01-mux-and-select"
 title = "Multiplexers: when, with, case"
 title_fa = "مالتی‌پلکسرها: when، with، case"
-status = "planned"
+status = "done"
 
 [[topic.lesson]]
 id = "02-decoders-and-encoders"
 title = "Decoders and priority encoders"
 title_fa = "دیکدرها و انکدر اولویت‌دار"
-status = "planned"
+status = "done"
 
 [[topic.lesson]]
 id = "03-adders-and-subtractors"
 title = "Adders and subtractors"
 title_fa = "جمع‌کننده‌ها و تفریق‌کننده‌ها"
-status = "planned"
+status = "done"
 
 [[topic.lesson]]
 id = "04-comparators-and-alu"
 title = "Comparators and a small ALU"
 title_fa = "مقایسه‌کننده‌ها و یک ALU کوچک"
-status = "planned"
+status = "done"
 
 [[topic.lesson]]
 id = "05-avoiding-latches"
 title = "Avoiding latches"
 title_fa = "پرهیز از لچ"
-status = "planned"
+status = "done"
 
 [[topic]]
 id = "03-sequential"

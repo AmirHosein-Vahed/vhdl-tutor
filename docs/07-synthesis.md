@@ -82,8 +82,14 @@ make synth
 which runs:
 
 ```bash
-yosys -m ghdl -p "ghdl --std=08 --workdir=build -e and2; synth; stat"
+yosys -m ghdl -p "ghdl --std=08 --workdir=build and2; synth; stat"
 ```
+
+The `make synth` target analyzes the sources with GHDL first, then asks the
+Yosys plugin to elaborate the unit already in `build/`. If your GHDL comes from
+a relocatable tarball rather than a distro package, export `GHDL_PREFIX` (for
+example `~/.local/opt/ghdl-6.0.0/lib/ghdl`) so libghdl can find its `std` and
+`ieee` libraries.
 
 What the report tells you:
 
